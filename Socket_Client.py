@@ -1,8 +1,8 @@
 import socket
 import sys
 
-ip='192.168.178.7'
-port=6666
+ip = '192.168.178.7'
+port = 6666
 
 # Create a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -15,7 +15,7 @@ sock.connect(server_address)
 try:
 
     # Send data
-    message = 'This is the message.  It will be repeated.'
+    message = '0;60;60;10'
     print('sending "%s"' % message, file=sys.stderr)
     sock.sendto(message.encode(), (ip, port))
 

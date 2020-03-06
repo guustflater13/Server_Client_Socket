@@ -1,8 +1,8 @@
 import socket
 import sys
 
-ip='192.168.178.7'
-port=6666
+ip = '192.168.178.7'
+port = 6666
 
 # Create a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -29,7 +29,7 @@ while True:
             print('received "%s"' % data, file=sys.stderr)
             if data:
                 print('sending data back to the client', file=sys.stderr)
-                #connection.sendall(data)
+                # connection.sendall(data)
                 connection.sendto(data, client_address)
             else:
                 print('no more data from', client_address, file=sys.stderr)
